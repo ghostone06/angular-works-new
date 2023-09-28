@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { Observable, Subject, toArray } from 'rxjs';
 import { ProductService } from 'src/app/services/ProductService.service';
 import { DataService } from 'src/app/services/data.service';
@@ -17,7 +17,8 @@ export class DependencyInjectionComponent implements OnInit {
 
   constructor(
     private dataService: DataService, 
-    private productService: ProductService /* ProductService ilgili servisin referansı ve DI Tokendır, prodductService prodviderdır*/
+    private productService: ProductService, /* ProductService ilgili servisin referansı ve DI Tokendır, prodductService prodviderdır*/
+    @Inject(ProductService) private productService2: ProductService /*2. kullanım şekli*/
     ) {}
 
   ngOnInit(): void {

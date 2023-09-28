@@ -3,8 +3,20 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { data, dataTableHeader } from './data';
 
-@Injectable({
+@Injectable({  
+  /*
+  1-Injectable = service, 
+  2-Bu etiketle işaretleyerek constructorda bağımlılık varsa arka planda hallet diyerek providera yazabilmemizi sağlar, bağlı olduğu servisi kullanacaksak 
+  providersa bağlı olduğu servisi de eklemelisin yoksa null olur.
+  */ 
   providedIn: 'root',
+  /*
+  providedIn değerleri: 
+  1-root -> root module singleton olarak proive eder
+  2-any: her modül için bir instance oluşur
+  3-platform: servisin platforma özgü olduğunu gösterir
+  4-Module adı verilip o module sınırları içerisinde kullanılmasını sağlar
+  */
 })
 export class DataService {
   constructor(private http: HttpClient) {}
