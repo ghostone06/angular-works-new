@@ -1,7 +1,7 @@
 # ObservableSample (All Works as Component)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.3.
-In the begining, I was thinking work on Observable topic. But later on I decided to add all my works in this projects.
+In the begining, I was thinking work on Observable topic. But later on I decided to add all my works in this project.
 
 ## Development server
 
