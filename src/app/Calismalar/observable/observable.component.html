@@ -1,0 +1,62 @@
+<h1>Observable Component</h1>
+<div>
+    <table class="table">
+      <tr>
+        <th>Observable Test</th>
+        <th *ngFor="let promiseData of promiseData">
+          {{ promiseData.header }}
+        </th>
+      </tr>
+      <tr>
+        <td rowspan="5">
+          <p>{{ observableData | async }}</p>
+        </td>
+      </tr>
+      <tr>
+        <td *ngFor="let promiseData of promiseData">
+          <p>{{ promiseData.id }}</p>
+        </td>
+      </tr>
+      <tr>
+        <td *ngFor="let promiseData of promiseData">
+          <p>{{ promiseData.title }}</p>
+        </td>
+      </tr>
+      <tr>
+        <td *ngFor="let promiseData of promiseData">
+          <p>{{ promiseData.userId }}</p>
+        </td>
+      </tr>
+      <tr>
+        <td *ngFor="let promiseData of promiseData">
+          <p>{{ promiseData.completed }}</p>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div style="margin-top: 5px">
+    <table class="table">
+      <tr>
+        <th *ngFor="let promiseDataTableHeader of promiseDataTableHeader">
+          {{promiseDataTableHeader}}
+        </th>
+      </tr>
+      <tr *ngFor="let promiseData of promiseData">
+        <td>
+            {{ promiseData.header }} 
+        </td>
+        <td>
+          {{ promiseData.id }}
+        </td>
+        <td>
+          {{ promiseData.title }}
+        </td>
+        <td>
+          {{ promiseData.userId }}
+        </td>
+        <td>
+          {{ promiseData.completed }}
+        </td>
+      </tr>
+    </table>
+  </div>
